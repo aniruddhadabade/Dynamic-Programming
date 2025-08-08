@@ -1,37 +1,37 @@
 public class cntofSubsettarget {
     public static void main(String[] args) {
 
-        //memoize or top down
-        int dp[][];
-        private int solve(int nums[], int t, int n ,int idx, int sum){
-            if(sum>t){
-                return 0;
-            }
-            if (idx == 0) {
-                return (sum == t) ? 1 : 0;
-            }
+        // //memoize or top down
+        // int dp[][];
+        // private int solve(int nums[], int t, int n ,int idx, int sum){
+        //     if(sum>t){
+        //         return 0;
+        //     }
+        //     if (idx == 0) {
+        //         return (sum == t) ? 1 : 0;
+        //     }
             
-            if(dp[idx][sum]!= -1){
-                return dp[idx][sum];
-            }
-            
-            
-            int op1 = solve(nums, t, n, idx-1, sum+nums[idx-1]);
-            int op2 = solve(nums, t, n, idx-1, sum);
-            
-            return dp[idx][sum] = op1+op2;
-        }
-        public int perfectSum(int[] nums, int target) {
-            int n = nums.length;
-            dp = new int[n+1][target+1];
-            
-            for(int rows[]:dp){
-                Arrays.fill(rows, -1);
-            }
+        //     if(dp[idx][sum]!= -1){
+        //         return dp[idx][sum];
+        //     }
             
             
-            return solve(nums, target, n, n, 0);
-        }
+        //     int op1 = solve(nums, t, n, idx-1, sum+nums[idx-1]);
+        //     int op2 = solve(nums, t, n, idx-1, sum);
+            
+        //     return dp[idx][sum] = op1+op2;
+        // }
+        // public int perfectSum(int[] nums, int target) {
+        //     int n = nums.length;
+        //     dp = new int[n+1][target+1];
+            
+        //     for(int rows[]:dp){
+        //         Arrays.fill(rows, -1);
+        //     }
+            
+            
+        //     return solve(nums, target, n, n, 0);
+        // }
 
         //bottom up dp
 

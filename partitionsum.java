@@ -1,43 +1,43 @@
 public class partitionsum {
     public static void main(String[] args) {
 
-        // recursive approach
-        private boolean solve(int nums[], int n, int target, int curr, int idx){
-            if(target==curr){
-                return true;
-            }
+        // // recursive approach
+        // private boolean solve(int nums[], int n, int target, int curr, int idx){
+        //     if(target==curr){
+        //         return true;
+        //     }
     
-            if(curr>target){
-                return false;
-            }
+        //     if(curr>target){
+        //         return false;
+        //     }
     
-            if(idx==n){
-                return false;
-            }
+        //     if(idx==n){
+        //         return false;
+        //     }
     
-            boolean op1 = solve(nums, n, target, curr+nums[idx], idx+1);
-            boolean op2 = solve(nums, n, target, curr, idx+1);
+        //     boolean op1 = solve(nums, n, target, curr+nums[idx], idx+1);
+        //     boolean op2 = solve(nums, n, target, curr, idx+1);
     
-            return op1 || op2;
+        //     return op1 || op2;
     
     
-        }
-        public boolean canPartition(int[] nums) {
-            int n = nums.length;
+        // }
+        // public boolean canPartition(int[] nums) {
+        //     int n = nums.length;
     
-            int sum = 0;
-            for(int a:nums){
-                sum += a;
-            }
+        //     int sum = 0;
+        //     for(int a:nums){
+        //         sum += a;
+        //     }
     
-            if(sum % 2 != 0){
-                return false;
-            }
+        //     if(sum % 2 != 0){
+        //         return false;
+        //     }
     
-            int target = sum/2;
+        //     int target = sum/2;
     
-            return solve(nums, n, target, 0, 0);
-        }
+        //     return solve(nums, n, target, 0, 0);
+        // }
         int[] nums = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
         // bottom up approach
         int n = nums.length;
@@ -47,7 +47,7 @@ public class partitionsum {
         }
 
         if(target%2!=0){
-            return false;
+            System.out.println(false); 
         }
 
         target = target/2;
@@ -74,6 +74,6 @@ public class partitionsum {
                 }
             }
         }
-        return dp[n][target];
+        System.out.println(dp[n][target]);
     }
 }
