@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class minsumpartition {
     public static void main(String[] args) {
-        int arr[] = {2,-1,0,4,-2,-9};
+        int arr[] = {3, 9, 7, 3};
         int n = arr.length;
         
         int range = 0;
