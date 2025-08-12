@@ -1,4 +1,36 @@
 public class coinchange1 {
+    /*class Solution {
+    private int mindiff = Integer.MAX_VALUE;
+
+    private void solve(int coins[], int amount, int sum, int idx, int cnt){
+        if(sum==amount){
+            mindiff = Math.min(mindiff, cnt);
+            return;
+        }
+
+        if(sum>amount){
+            return;
+        }
+
+        if(idx==coins.length){
+            return;
+        }
+
+        int op1 = sum;
+        int op2 = sum;
+
+        solve(coins, amount, sum+coins[idx], idx, cnt+1);
+        solve(coins, amount, sum, idx+1, cnt);
+    }
+    public int coinChange(int[] coins, int amount) {
+        solve(coins, amount, 0, 0, 0);
+
+        if(mindiff==Integer.MAX_VALUE){
+            return -1;
+        }
+        return mindiff;    
+    }
+} */
     public int coinChange(int[] coins, int amount) {
         int n = coins.length;
 
