@@ -37,6 +37,8 @@ public class maxribbonCut {
                 }
             }
         }
-        System.out.println(dp[N]);
+        for (int i = 0; i < dp.length; i++) {
+            System.out.print(dp[i] + " ");
+        }
     }
 }
