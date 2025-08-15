@@ -1,5 +1,3 @@
-package LCS;
-
 public class longestCommonSequesnce {
     /*
     memoization approach

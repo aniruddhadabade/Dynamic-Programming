@@ -1,7 +1,5 @@
-package LCS;
-
 public class printingLcs {
-    public String printlongestCommonSubsequence(String text1, String text2) {
+    public static String printlongestCommonSubsequence(String text1, String text2) {
         int m = text1.length();
         int n = text2.length();
 
@@ -30,6 +28,7 @@ public class printingLcs {
 
         while (i>0 && j>0) {
             if(text1.charAt(i-1)==text2.charAt(j-1)){
+                sb.append(text1.charAt(i-1)); 
                 i--;
                 j--;
             }
@@ -45,6 +44,9 @@ public class printingLcs {
         return sb.reverse().toString();
     }
     public static void main(String[] args) {
-        
+        String s1 = "AGGTAB";
+        String s2 = "GXTXAYB";
+
+        System.out.println(printlongestCommonSubsequence(s1, s2));
     }
 }
