@@ -62,8 +62,8 @@ public class longestCommonSequesnce {
         return dp[n][m];
     }
     public static void main(String[] args) {
-        String text1 = "abcde";
-        String text2 = "ace";
+        String text1 = "intention";
+        String text2 = "execution";
         longestCommonSequesnce obj = new longestCommonSequesnce();
         System.out.println(obj.longestCommonSubsequence(text1, text2));
     }
